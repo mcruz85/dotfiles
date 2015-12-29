@@ -94,8 +94,8 @@ alias ld="ls -ld */"   # List in long format, only directories
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
-
-
+alias path='echo $PATH | tr -s ":" "\n"'  # Pretty print the path
+ 
 # Functions
 # Create a new directory and enter it
 function mk() {
