@@ -1,16 +1,12 @@
 #!/bin/bash
-
 ############################
-# This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
+# this script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
 ############################
-
 
 ####### Variables
-
 dir=~/dotfiles
-olddir=~/dotfiles
-files="bashrc vimrc"
-
+olddir=~/dotfiles_old
+files="bashrc vimrc tmux.conf"
 #######
 
 
