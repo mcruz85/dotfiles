@@ -56,6 +56,11 @@ plugins=(git docker rails)
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$HOME/bin:$PATH"
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -83,7 +88,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="$HOME/bin:$PATH"
+# Aliases
+alias l="ls -la"       # List in long format, include dotfiles
+alias ld="ls -ld */"   # List in long format, only directories
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
 
-export JAVA_HOME=$(/usr/libexec/java_home)
+
+# Functions
+# Create a new directory and enter it
+function mk() {
+  mkdir -p "$@" && cd "$@"
+}
